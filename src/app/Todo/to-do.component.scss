@@ -1,0 +1,21 @@
+.todos{
+  width: 50%;
+  transform: translateX(50%);
+  form{
+    justify-content: space-between;
+    .todo-input{
+      width: 100%;
+      margin-bottom: 1rem;
+      display: inline-block;
+      padding: 8px;
+    }
+  }
+  .todo{
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .todo.done{
+    text-decoration: line-through;
+  }
+}

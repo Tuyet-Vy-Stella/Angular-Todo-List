@@ -1,0 +1,23 @@
+<div class="todos">
+  <form class="d-flex" (submit)="onAddItem()">
+    <input
+      type="text"
+      name="inputItem"
+      placeholder="Enter item here"
+      class="todo-input me-3"
+      [(ngModel)]="inputItem"
+    >
+    <input
+      type="submit"
+      value="Add Item"
+      class="todo-submit btn btn-success mb-3"
+    >
+  </form>
+  <div *ngFor="let item of items; let i = index" class="todo {{ (item.completed ? 'done' : '')}} d-flex border p-2">
+    <span class="id">{{ i }}</span>
+    <p class="text-content m-0" (click)="onHandleStatus(i)">{{ item.content}}</p>
+    <button class="btn btn-danger delete" (click)="onDeleteItem(i)">
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
+  </div>
+</div>
